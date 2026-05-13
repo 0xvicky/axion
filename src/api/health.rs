@@ -6,6 +6,6 @@ pub async fn health() -> Json<Value> {
         "status":"ok",
         "message":"axion"
     });
-
+    println!("{res}");
     Json(res)
 }
