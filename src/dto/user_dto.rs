@@ -10,6 +10,7 @@ pub struct UserPayload {
 #[derive(Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct UserResponse {
+    pub user_id: String,
     pub user_email: String,
     #[serde(with = "time::serde::iso8601")]
     pub created_at: OffsetDateTime,
