@@ -218,6 +218,7 @@ dependencies = [
  "anyhow",
  "axum",
  "cargo-watch",
+ "dotenvy",
  "mongodb",
  "serde",
  "serde_json",

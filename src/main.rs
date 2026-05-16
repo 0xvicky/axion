@@ -11,18 +11,21 @@ use axum::{
     Router,
     routing::{get, post},
 };
-use mongodb::{Client, bson::DbPointer};
+use dotenvy::dotenv;
+use mongodb::Client;
 
-struct DBState {
-    db_client: Client,
+#[derive(Clone)]
+pub struct DBState {
+    pub db_client: Client,
 }
 
 #[tokio::main]
-async fn main() -> Result<()> {
-    // println!("Hello, world!");
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+    // println!("Hello, world!");res data on heap and gives fixed-size pointer on stac
     //connect to db
+    dotenv().ok();
 
-    let client = db_init();
+    let client = db_init().await?;
 
     let state = DBState { db_client: client };
     let app = Router::new()

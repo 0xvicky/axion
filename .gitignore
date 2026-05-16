@@ -1,1 +1,44 @@
+# Rust build artifacts
 /target
+
+# Rust/Cargo
+Cargo.lock
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Coverage
+coverage/
+*.profraw
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# JetBrains
+*.iml
+
+# Vim
+*.swp
+*.swo
+
+# Rust analyzer
+rust-project.jsons
